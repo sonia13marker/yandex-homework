@@ -219,29 +219,3 @@ body {
 	}
 
 }
-/*
-
-.footer {
-	display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer__list {
-	width: 615px;
-	height: 20px;
-	list-style-type: none;
-	font-size: 10px;
-	padding: 0;
-	margin: 0;
-	position: fixed;
-	bottom: 0;
-}
-.footer__list li {
-	display: inline-block;
-	margin-right: 15px;
-}
-.footer__list a {
-	color: gray;
-}
