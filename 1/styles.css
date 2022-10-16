@@ -54,18 +54,13 @@ body {
 	align-items: center;
 	border: none;
 	background-color: #FFDB4D;
-	padding: 12px 12px;
-	margin-left: 2px;
+	padding: 12px;
+	margin: 0 10px;
 }
 
 .search__button:hover {
 	cursor: pointer;
 	background-color: #fad234;
-}
-
-
-.search__span {
-	margin: 0 10px;
 }
 
 
