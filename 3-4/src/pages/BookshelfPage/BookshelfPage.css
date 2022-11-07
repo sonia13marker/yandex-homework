@@ -1,0 +1,29 @@
+.bookshelf {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+
+.choice_genre {
+	margin: 50px 20px 55px 40px; 
+	width: max-content; 
+	height: 660px;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 20px;
+	border-radius: 8px;
+	font-weight: 600;
+	cursor: pointer;
+}
+.tab {
+	font-weight: 600;
+
+}
+.activeTab {
+	font-weight: 800;
+}
+
