@@ -7,7 +7,7 @@ export const store = configureStore({
 		// book: bookSlice.reducer,
 
 	}),
-	//middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
+	middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
 });
 
 console.log(store.getState());
