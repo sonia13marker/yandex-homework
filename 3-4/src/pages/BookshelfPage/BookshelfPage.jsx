@@ -19,8 +19,8 @@ export const BookshelfPage = (props) => {
 		{
 			// props.bookshelf.map((bookshelf) => <button key={bookshelf.id} onClick={() => setActiveBookshelf(bookshelf)}>{bookshelf.name}</button>)
 			//не хочет работать жирность
-			props.bookshelf.map((bookshelf) => <p className={classnames(styles.tab, {
-				[styles.activeTab] : activeBookshelf.id === bookshelf.id })} key={bookshelf.id} onClick={() => setActiveBookshelf(bookshelf)}>{bookshelf.name}</p>)
+			//{classnames(styles.tab, {[styles.activeTab] : activeBookshelf.id === bookshelf.id })}
+			props.bookshelf.map((bookshelf) => <p className="genre" key={bookshelf.id} onClick={() => setActiveBookshelf(bookshelf)}>{bookshelf.name}</p>)
 		}
 	</div>
 

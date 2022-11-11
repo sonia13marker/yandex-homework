@@ -5,6 +5,9 @@
 	flex-wrap: nowrap;
 	justify-content: center;
 }
+.genre:hover {
+	border-bottom: 1px solid black;
+}
 
 .choice_genre {
 	margin: 50px 20px 55px 40px; 
@@ -18,12 +21,5 @@
 	border-radius: 8px;
 	font-weight: 600;
 	cursor: pointer;
-}
-.tab {
-	font-weight: 600;
-
-}
-.activeTab {
-	font-weight: 800;
 }
 
