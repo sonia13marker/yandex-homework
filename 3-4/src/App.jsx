@@ -12,11 +12,12 @@ export function App() {
 		<Layout>
 
 	{/*отображение страницы с жанрами и книгами выбранного жанра*/}
-	<BookshelfPage bookshelf={bookshelf} />
+	<BookshelfPage  />
 
 	{/*отображение страницы с выбранной книгой, отзывами и аннотацией
 	<ReviewsPage bookshelf={bookshelf} />*/}
 
 	</Layout>
 	</Provider>
-	)}
+	);
+}
