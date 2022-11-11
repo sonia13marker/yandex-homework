@@ -1,11 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 import {Statuses} from '../../constants/statuses.js';
-
+import { bookshelf } from '../../constants/mock.js';
 
 const initialState =  {
-		entities: {},
+		entities: { bookshelf },
 		ids: [],
-		status: Statuses.idle,
+		status: Statuses.success,
 	};
 
 export const bookshelfSlice = createSlice( {
@@ -31,3 +31,5 @@ export const bookshelfSlice = createSlice( {
 
 	},
 } )
+
+console.log(bookshelf[0].books[1].name);
