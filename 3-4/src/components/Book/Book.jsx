@@ -1,9 +1,16 @@
 /*тут отображение каждой книги в одном разделе, которая есть в массиве*/
 import styles from './Book.css';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { selectBookById } from '../../store/book/selectors.js';
 
-export const Book = ({book}) => {
+export const Book = ({bookId}) => {
+	const book = useSelector(state => selectBookById(state, bookId))
 	const [count, setCount] = useState(0); 
+
+	if (!book) {
+		return null;
+	}
 
 	return <div className="book_card">
 		<div>

@@ -1,5 +1,12 @@
-export const selectGenreModule = (state) => state.genre;
+import { Statuses } from '../../constants/statuses';
 
 
-//селлектор, который возвращает наши жанры 
-export const selectGenres = (state) => Object.values(selectGenreModule(state).entities);
+export const selectBookModule = (state) => state.book;
+
+
+//селлектор, который возвращает наши книги
+export const selectBooks = (state) => Object.values(selectBookModule(state).entities);
+
+export const selectBookById = (state, bookId) => selectBookModule(state).entities[bookId];
+
+export const selectIsBooksLoading = (state) => selectBookModule(state).status === Statuses.inProgress;

@@ -2,7 +2,7 @@
 
 import { Layout } from './components/Layout/Layout.jsx';
 import { BookshelfPage } from './pages/BookshelfPage/BookshelfPage.jsx';
-import { bookshelf } from './constants/mock.js';
+import { bookshelfs } from './constants/mock.js';
 import { ReviewsPage } from './pages/ReviewsPage/ReviewsPage.jsx';
 import {Provider} from 'react-redux';
 import {store} from './store';
@@ -15,7 +15,7 @@ export function App() {
 	<BookshelfPage  />
 
 	{/*отображение страницы с выбранной книгой, отзывами и аннотацией
-	<ReviewsPage bookshelf={bookshelf} />*/}
+	<ReviewsPage bookshelfs={bookshelfs} />*/}
 
 	</Layout>
 	</Provider>

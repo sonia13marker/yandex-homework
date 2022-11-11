@@ -3,7 +3,7 @@
 import { Review } from '../Review/Review.jsx';
 
 export const Reviews = (props) => {
-	let activeBookshelf = props.bookshelf[0];
+	let activeBookshelf = props.bookshelfs[0];
 
 	return <div>
  			{/*<h3>Reviews</h3>

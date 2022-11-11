@@ -1,6 +1,6 @@
 //это массив данных
 
-export const bookshelf = [
+export const bookshelfs = [
   {
     id: "abs",
     name: "Художественная литература",

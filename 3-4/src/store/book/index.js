@@ -1,9 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 import {Statuses} from '../../constants/statuses.js';
-import { bookshelf } from '../../constants/mock.js';
+import { bookshelfs } from '../../constants/mock.js';
 
 const initialState =  {
-		entities: { bookshelf },
+		entities: { bookshelfs },
 		ids: [],
 		status: Statuses.success,
 	};
