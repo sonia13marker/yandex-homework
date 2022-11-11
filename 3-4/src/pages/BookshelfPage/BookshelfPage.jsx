@@ -5,13 +5,14 @@ import { useState } from 'react';
 import styles from './BookshelfPage.css';
 import { useSelector } from 'react-redux';
 import { bookshelf } from '../../constants/mock.js';
+import {selectGenres} from '../../store/cinema/selectors';
 
 import classnames from 'classnames';
 
 
-export const BookshelfPage = (props) => {
+export const BookshelfPage = () => {
 	{/*let activeBookshelf = props.bookshelf[0];*/}
-	const genres = useSelector(state => Object.keys(state.genre.entities));
+	const genres = useSelector((state) => selectGenres(state));
 
 	const [activeBookshelf, setActiveBookshelf] = useState(genres[0]);
 
