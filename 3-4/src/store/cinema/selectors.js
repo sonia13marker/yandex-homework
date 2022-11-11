@@ -1,7 +1,9 @@
-export const selectGenreModule = (state) => state.bookshelf;
+export const selectBookshelfModule = (state) => state.bookshelf;
 
 //селектор, который возвращает наши жанры 
-export const selectGenres = (state) => Object.values(selectGenreModule(state).entities);
+export const selectBookshelfs = (state) => Object.values(selectBookshelfModule(state).entities);
+
+export const selectBookshelfById = (state, bookshelfId) => selectBookshelfModule(state).entities[bookshelfId];
 
 
-export const selectGenresBookIds = (state, bookshelfId) => selectGenreModule(state).entities[bookshelfId].books;
+export const selectBookshelfsBookIds = (state, bookshelfId) => selectBookshelfModule(state).entities[bookshelfId].books;

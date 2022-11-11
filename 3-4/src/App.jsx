@@ -6,18 +6,32 @@ import { bookshelfs } from './constants/mock.js';
 import { ReviewsPage } from './pages/ReviewsPage/ReviewsPage.jsx';
 import {Provider} from 'react-redux';
 import {store} from './store';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Bookshelf } from './components/Bookshelf/Bookshelf.jsx';
+
 
 export function App() {
 	return (<Provider store={store}> 
-		<Layout>
+
+			<BrowserRouter>
+				<Layout>
+					<Routes>
+						<Route index element={<BookshelfPage />}>
+							<Route path=":bookshelfId" element={<Bookshelf/>}/>
+						</Route>
+						<Route path="reviews" element={<ReviewsPage bookshelfs={bookshelfs} />}/>
+					</Routes>
+				</Layout>
+			</BrowserRouter>
+		
 
 	{/*отображение страницы с жанрами и книгами выбранного жанра*/}
-	<BookshelfPage  />
+	{/*<BookshelfPage  />*/}
 
 	{/*отображение страницы с выбранной книгой, отзывами и аннотацией
 	<ReviewsPage bookshelfs={bookshelfs} />*/}
 
-	</Layout>
+	
 	</Provider>
 	);
 }

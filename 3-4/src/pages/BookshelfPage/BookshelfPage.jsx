@@ -5,32 +5,31 @@ import { useState } from 'react';
 import styles from './BookshelfPage.css';
 import { useSelector } from 'react-redux';
 import { bookshelfs } from '../../constants/mock.js';
-import {selectGenres} from '../../store/cinema/selectors';
+import {selectBookshelfs} from '../../store/cinema/selectors';
+import { NavLink, Outlet, isActive  } from 'react-router-dom';
 
 import classnames from 'classnames';
 
 
 export const BookshelfPage = () => {
-	{/*let activeBookshelf = props.bookshelf[0];*/}
-	const bookshelf = useSelector((state) => selectGenres(state));
 
-	const [activeBookshelf, setActiveBookshelf] = useState(bookshelf[0]);
-		console.log(bookshelf[0]);
+	const bookshelfs = useSelector((state) => selectBookshelfs(state));
+
 
 	return <div className="bookshelf">
 	
 	{/*выбор жанра литературы*/}
+
 	<div className="choice_genre">
 		{
-			// props.bookshelf.map((bookshelf) => <button key={bookshelf.id} onClick={() => setActiveBookshelf(bookshelf)}>{bookshelf.name}</button>)
-			//не хочет работать жирность
-			//{classnames(styles.tab, {[styles.activeTab] : activeBookshelf.id === bookshelf.id })}
-			bookshelfs.length > 0 &&  bookshelfs.map((bookshelf) => <p className="genre" key={bookshelf.id} onClick={() => setActiveBookshelf(bookshelf)}>{bookshelf.name}</p>)
+			bookshelfs.length > 0 &&  bookshelfs.map((bookshelf) =>  <NavLink to={bookshelf.id} key={bookshelf.id} className={({isActive}) => "genre"})>{bookshelf.name}
+		</NavLink>
 		}
 	</div>
 
 	{/*конец выбора*/}
-	{activeBookshelf &&	<Bookshelf bookshelf={activeBookshelf}/>}
+	{/*{activeBookshelf &&	<Bookshelf bookshelf={activeBookshelf}/>}*/}
+	<Outlet />
 
 		
 		

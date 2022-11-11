@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import {Statuses} from '../../constants/statuses.js';
+import { Statuses } from '../../constants/statuses.js';
 import { bookshelfs } from '../../constants/mock.js';
 
 const initialState =  {
@@ -10,7 +10,7 @@ const initialState =  {
 
 export const bookshelfSlice = createSlice( {
 
-	name: 'genre',
+	name: 'bookshelf',
 	initialState,
 	reducers: {
 		startLoading: (state, action) => {
@@ -31,4 +31,3 @@ export const bookshelfSlice = createSlice( {
 
 	},
 } )
-

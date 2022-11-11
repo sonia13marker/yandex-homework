@@ -1,12 +1,15 @@
 /*тут отображение каждой книги в одном разделе, которая есть в массиве*/
 import styles from './Book.css';
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { selectBookById } from '../../store/book/selectors.js';
+import { selectBookCount } from '../../store/cart/selectors.js';
+import { cartSlice } from '../../store/cart';
 
 export const Book = ({bookId}) => {
+	const dispatch = useDispatch()
 	const book = useSelector(state => selectBookById(state, bookId))
-	const [count, setCount] = useState(0); 
+	const count = useSelector(state => selectBookCount(state, bookId));
 
 	if (!book) {
 		return null;
@@ -22,9 +25,9 @@ export const Book = ({bookId}) => {
 		</div>
 
 		<span>
-		<button className="book__button" onClick={() => setCount(count - 1) } disabled={count === 0}>-</button> 
-		<span className="button__text">{count}</span> 
-		<button className="book__button" onClick={() => setCount(count + 1)}>+</button>
+		<button className="book__button" onClick={() => dispatch(cartSlice.actions.removeBook(bookId)) } disabled={count === 0}>-</button> 
+		<span className="button__text">{count || 0}</span> 
+		<button className="book__button" onClick={() => dispatch(cartSlice.actions.addBook(bookId))}>+</button>
 		</span>
 	</div>
 }
