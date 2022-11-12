@@ -19,7 +19,9 @@ export function App() {
 						<Route index element={<BookshelfPage />}>
 							<Route path=":bookshelfId" element={<Bookshelf/>}/>
 						</Route>
-						<Route path="reviews" element={<ReviewsPage bookshelfs={bookshelfs} />}/>
+						<Route path="reviews" element={<ReviewsPage />}>
+							<Route path=":bookshelfId" element={<Bookshelf/>}/>
+						</Route>
 					</Routes>
 				</Layout>
 			</BrowserRouter>

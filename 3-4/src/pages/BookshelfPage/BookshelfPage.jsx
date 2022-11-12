@@ -15,16 +15,16 @@ export const BookshelfPage = () => {
 
 	const bookshelfs = useSelector((state) => selectBookshelfs(state));
 
+{/*выбор жанра литературы*/}
 
-	return <div className="bookshelf">
-	
-	{/*выбор жанра литературы*/}
+	return <div className="bookshelf"> 
 
-	<div className="choice_genre">
-		{
-			bookshelfs.length > 0 &&  bookshelfs.map((bookshelf) =>  <NavLink to={bookshelf.id} key={bookshelf.id} className={({isActive}) => "genre"})>{bookshelf.name}
-		</NavLink>
-		}
+	<div className="choice_genre"> {
+		
+		bookshelfs.length > 0 &&  bookshelfs.map((bookshelf) =>  <NavLink to={bookshelf.id} key={bookshelf.id} className={({ isActive }) => 
+        (isActive ? {fontWeight: '400'} : {fontWeight: '600'})} className="genre">{bookshelf.name} </NavLink>
+	}
+		
 	</div>
 
 	{/*конец выбора*/}

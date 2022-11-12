@@ -5,5 +5,7 @@ export const selectBookshelfs = (state) => Object.values(selectBookshelfModule(s
 
 export const selectBookshelfById = (state, bookshelfId) => selectBookshelfModule(state).entities[bookshelfId];
 
+export const selectReviewById = (state, reviewId) => selectBookshelfModule(state).entities[reviewId];
+
 
 export const selectBookshelfsBookIds = (state, bookshelfId) => selectBookshelfModule(state).entities[bookshelfId].books;
