@@ -8,6 +8,8 @@ import {Provider} from 'react-redux';
 import {store} from './store';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Bookshelf } from './components/Bookshelf/Bookshelf.jsx';
+import { CartPage } from './pages/CartPage/CartPage.jsx';
+
 
 
 export function App() {
@@ -16,12 +18,13 @@ export function App() {
 			<BrowserRouter>
 				<Layout>
 					<Routes>
-						<Route index element={<BookshelfPage />}>
-							<Route path=":bookshelfId" element={<Bookshelf/>}/>
+						<Route path="/" element={<BookshelfPage/>}>
+							 <Route path="bookshelf:id" element={<Bookshelf/>}></Route>
 						</Route>
-						<Route path="reviews" element={<ReviewsPage />}>
-							<Route path=":bookshelfId" element={<Bookshelf/>}/>
+						<Route path="reviews" elementlement={<ReviewsPage/>}>
+							<Route path="book" element={<Bookshelf/>}/>
 						</Route>
+						<Route path="cart" element={<CartPage/>}></Route>
 					</Routes>
 				</Layout>
 			</BrowserRouter>

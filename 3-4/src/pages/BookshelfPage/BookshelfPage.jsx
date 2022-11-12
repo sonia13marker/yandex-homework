@@ -22,7 +22,7 @@ export const BookshelfPage = () => {
 	<div className="choice_genre"> {
 		
 		bookshelfs.length > 0 &&  bookshelfs.map((bookshelf) =>  <NavLink to={bookshelf.id} key={bookshelf.id} className={({ isActive }) => 
-        (isActive ? {fontWeight: '400'} : {fontWeight: '600'})} className="genre">{bookshelf.name} </NavLink>
+        (isActive ? {fontWeight: '400'} : {fontWeight: '600'})} className="genre">{bookshelf.name} </NavLink>)
 	}
 		
 	</div>

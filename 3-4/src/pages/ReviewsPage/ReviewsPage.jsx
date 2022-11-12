@@ -54,9 +54,9 @@ export const ReviewsPage = () => {
 
 		{/*отображение маленькой карточки-аннотации*/}
 			<div className="book_card1 small">
-				<div>
+				{/*<div>
 					<p className="book_text black"><span className="ann__title">Аннотация</span>{props.bookshelf[0].books[0].annotation}</p>
-				</div>
+				</div>*/}
 			</div>
 </section>
 	</div>
