@@ -10,9 +10,9 @@ export  const Layout = (props) => {
 		<header className="header">
 			<Link to="/"><h1 className="header__title">Магазин</h1></Link>
 			<Link to="/bookshelf">
-				{
+				{/*{
 					<BookshelfPage/>
-				}
+				}*/}
 			</Link>
 			<Link to="/cart">
 			<button className="button__cart"><img src={require('./shopping-cart.png')}/></button>
