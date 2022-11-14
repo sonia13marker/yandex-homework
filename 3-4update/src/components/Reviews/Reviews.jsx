@@ -19,7 +19,35 @@ export const Reviews = ({reviewId}) => {
 			reviewIds.map((id) => <span key={id}><Review reviewId={id}/></span>)
 				
 				}
+
  			
  		</div>
  }
+
+
+
+
+ 			{/*<h3>Reviews</h3>
+ 			<div>
+ 				{
+ 					activeBookshelf.reviews.map((review) => <span key={review.id}><Review review={review}/></span>)
+ 				}
+ 			</div>*/}
+
+
+
+ 			{/*{<Review review={bookshelf.reviews}/>}*/}
+ 			{/*<ul>
+				{
+					activeBookshelf.reviews.map((review) => <li key={review.id}><Review review={review}/></li>)
+ 				}
+ 			</ul>*/}
+ 
+
+ // export const Books = ({books}) => {
+	// return <div className="books">
+	// 			{
+	// 				books.map((book) => <span key={book.id}><Book book={book}/></span>)
+	// 			}
+	// 	</div>
 

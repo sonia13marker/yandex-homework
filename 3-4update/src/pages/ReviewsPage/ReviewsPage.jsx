@@ -26,11 +26,33 @@ export const ReviewsPage = () => {
       {/*отображение маленькой карточки*/}
 
       <section className="container">
+
         
 
        <Book {...book}/>
 
         
+
+        {/*??????на месте этого должен быть Outlet??????
+	<div><Bookshelf bookshelf={activeBookshelf}/></div>*/}
+
+       <Book {...book}/>
+
+        {/*<div className="book_card1 small">
+				<div>
+					<p className="book_title">{props.bookshelf[0].books[0].name}</p>
+					<p className="book_text">{props.bookshelf[0].books[0].autors}</p>
+					<p className="book_text">{props.bookshelf[0].books[0].genre}</p>
+					<p className="book_text">Оценка: {props.bookshelf[0].books[0].rating}</p>
+					<p className="book_price">{props.bookshelf[0].books[0].price}₽</p>
+				</div>
+				<span className="button_right">
+		<button className="book__button" onClick={() => setCount(count - 1) } disabled={count === 0}>-</button> 
+		<span className="button__text">{count}</span> 
+		<button className="book__button" onClick={() => setCount(count + 1)}>+</button>
+		</span>
+			</div>*/}
+
 
         {/*отображение маленькой карточки-аннотации*/}
         <div className="book_card1 small">
