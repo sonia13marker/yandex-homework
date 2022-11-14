@@ -1,0 +1,22 @@
+.review_card {
+	width: 85vw;
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 20px;
+	background-color: #fff;
+	color:  #000;
+	border-radius: 8px;
+	margin: 20px auto;
+}
+.review_card span {
+	display: inline-block;
+	float: right;
+}
+
+.review_title {
+	font-size: 16px;
+	font-weight: 700;
+	width: 100%;
+}
