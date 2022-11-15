@@ -1,23 +1,27 @@
 /*тут отображение каждой книги в одном разделе, которая есть в массиве*/
-import styles from './Book.css';
-import { useState } from 'react';
+import styles from './Book.css'
+import {Link} from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux';
+import { selectBookCount } from '../../store/cart/selectors.js';
+import { cartSlice } from '../../store/cart';
 
-export const Book = ({book}) => {
-	const [count, setCount] = useState(0); 
-
+export const Book = ({id,name,genre,author,rating,price}) => {
+	
+	const dispatch = useDispatch()
+	const count = useSelector(state => selectBookCount(state, id));
 	return <div className="book_card">
-		<div>
-			<p className="book_title">{book.name}</p>
-			<p className="book_text">{book.autors}</p>
-			<p className="book_text">{book.genre}</p>
-			<p className="book_text">Оценка: {book.rating}</p>
-			{book.price  !== undefined ? <p className="book_price">{book.price}₽</p> : <p>Нет в наличии</p>}
-		</div>
+		<Link to={`/reviews/${id}`}><div>
+			<p className="book_title">{name}</p>
+			<p className="book_text">{author}</p>
+			<p className="book_text">{genre}</p>
+			<p className="book_text">Оценка: {rating}</p>
+			<p className="book_price">{price}₽</p>
+		</div></Link>
 
 		<span>
-		<button className="book__button" onClick={() => setCount(count - 1) } disabled={count === 0}>-</button> 
-		<span className="button__text">{count}</span> 
-		<button className="book__button" onClick={() => setCount(count + 1)}>+</button>
+		<button className="book__button" onClick={() => dispatch(cartSlice.actions.removeBook(id)) } disabled={count === 0}>-</button> 
+		<span className="button__text">{count || 0}</span> 
+		<button className="book__button" onClick={() => dispatch(cartSlice.actions.addBook(id))}>+</button>
 		</span>
 	</div>
 }
