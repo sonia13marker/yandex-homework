@@ -1,34 +1,21 @@
-
-import styles from './index.module.css'
-
+import styles from './Summary.css';
 
 export function Summary({data}){
 
     let sum = 0;
     
     return(
-        <div className={styles.main}>
-            <span className={styles.span_zak}>Ваш заказ:</span>
+        <section className="main">
+            <span className="span_text">Ваш заказ:</span>
             {data.map(book => (
-                <p> 
-                    {book.name} x {book.count}, {book.price * book.count}
-                    
-                        {/* sum = {} */}
-                        
-                </p>
+                <p> {book.name} x {book.count}, {book.count * book.price}</p>
             ))
-         
              }
-             <div>
-                {/* {
-                    data.reduce((book) => ( 
-                        <p>{book.price * book.count} + sum</p>
-                    ))
-                } */}
-             </div>
-                <p className={styles.ed}> Итого:</p>
+             <span className="span_text end"> Итого: { data.map(book=> book.price * book.count).reduce((prev,cur) => prev+cur,0)}</span>
+           
+               
             
             
-        </div>
+        </section>
     )
 }

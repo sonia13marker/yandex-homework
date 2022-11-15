@@ -18,7 +18,7 @@ export const CartPage = () => {
 	return(
         <>
             <Summary data={dataToRender}/>
-            <Book dataToRender={books}/>
+            {/* <Book dataToRender={books}/> */}
         </>
     )
 }
