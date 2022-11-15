@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { selectBookCount } from '../../store/cart/selectors.js';
 import { cartSlice } from '../../store/cart';
 
-export const Book = ({id,name,genre,author,rating,price, data}) => {
+export const Book = ({id,name,genre,author,rating,price}) => {
 	
 	const dispatch = useDispatch()
 	const count = useSelector(state => selectBookCount(state, id));

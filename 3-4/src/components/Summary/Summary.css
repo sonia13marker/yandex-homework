@@ -1,6 +1,7 @@
 .main{
     position: relative;
-    height: 450px;
+    height: auto;
+    max-height: 80vh;
 	display: flex;
     flex-direction:column;
 	align-items: flex-start;
@@ -15,10 +16,23 @@
 	padding: 20px;
 }
 .span_text {
+    width: 90%;
     font-weight: 700;
 	font-size: 18px;
+    display: flex;
+    justify-content: space-between;
 }
 .end {
     position: absolute;
     bottom: 25px;
+}
+.bold {
+    font-weight: 700;
+}
+.butt {
+    color: white;
+    background-color: black;
+    padding: 6px 12px 8px;
+    border-radius: 8px;
+    margin-right: 10px;
 }
