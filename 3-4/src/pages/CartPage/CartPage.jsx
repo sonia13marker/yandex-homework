@@ -1,7 +1,8 @@
 import { Summary } from '../../components/Summary'
 import {useSelector} from 'react-redux'
 import { selectCartModule } from '../../store/cart/selectors'
-import {selectBooks} from '../store/book/selectors.js'
+import {selectBooks} from '../../store/book/selectors';
+import {Book} from '../../components/Book/Book';
 export const CartPage = () => {
     const cart = useSelector(selectCartModule)
     const books = useSelector(selectBooks);
@@ -17,6 +18,7 @@ export const CartPage = () => {
 	return(
         <>
             <Summary data={dataToRender}/>
+            <Book dataToRender={books}/>
         </>
     )
 }

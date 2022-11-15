@@ -1,5 +1,5 @@
 .book_card {
-	width: 100%;
+	width: 55vw;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;

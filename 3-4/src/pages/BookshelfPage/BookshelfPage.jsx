@@ -1,13 +1,13 @@
 import cn from "classnames";
 /*тут отображение страницы с выбором разделов и книгами из каждого раздела*/
-
+import styles from './BookshelfPage.css';
 import { Books } from "../../components/Books/Books.jsx";
 import { useState } from "react";
-import styles from "./BookshelfPage.css";
+import { genres } from '../../constants/genres';
+
 import { useSelector } from "react-redux";
 import { selectBookshelfs } from "../../store/cinema/selectors";
 import { NavLink, Outlet, isActive } from "react-router-dom";
-import { genres } from "../constants/genres";
 import classnames from "classnames";
 
 export const BookshelfPage = () => {

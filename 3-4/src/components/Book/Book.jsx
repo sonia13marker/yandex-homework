@@ -7,16 +7,16 @@ import { selectBookById } from '../../store/book/selectors.js';
 import { selectBookCount } from '../../store/cart/selectors.js';
 import { cartSlice } from '../../store/cart';
 
-export const Book = ({id,name,genre,autors,rating,annotation,price}) => {
+export const Book = ({id,name,genre,author,rating,annotation,price}) => {
 	const dispatch = useDispatch()
 	const count = useSelector(state => selectBookCount(state, id));
 	return <div className="book_card">
 		<Link to={`/reviews/${id}`}><div>
 			<p className="book_title">{name}</p>
-			<p className="book_text">{autors}</p>
+			<p className="book_text">{author}</p>
 			<p className="book_text">{genre}</p>
 			<p className="book_text">Оценка: {rating}</p>
-			{price  !== undefined ? <p className="book_price">{price}₽</p> : <p>Нет в наличии</p>}
+			<p className="book_price">{price}₽</p>
 		</div></Link>
 
 		<span>
