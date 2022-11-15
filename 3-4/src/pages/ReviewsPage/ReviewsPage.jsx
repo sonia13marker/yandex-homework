@@ -1,12 +1,10 @@
 import { Book } from '../../components/Book/Book';
 import { Review } from "../../components/Review/Review.jsx";
-import { useState } from "react";
 import styles from "./ReviewsPage.css";
 import { useSelector } from "react-redux";
 import { selectReviewsByBookId } from "../../store/reviews/selectors.js";
-import { Bookshelf } from "../../components/Bookshelf/Bookshelf.jsx";
 import { selectBookById } from "../../store/book/selectors";
-import { NavLink, Outlet, isActive, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 
 export const ReviewsPage = () => {
   const { id: bookId } = useParams();
