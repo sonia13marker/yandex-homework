@@ -1,12 +1,7 @@
 /*тут отображение одного раздела*/
 import { Books } from "../Books/Books.jsx";
-import { Reviews } from "../Reviews/Reviews.jsx";
-import { bookshelfs } from "../../constants/mock";
-import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectBookshelfs } from "../../store/cinema/selectors.js";
-import { Outlet } from "react-router-dom";
-//было books & bookshelf.books
 
 export const Bookshelf = ({currentBookshelfId}) => {
   const bookshelfs = useSelector(selectBookshelfs);
