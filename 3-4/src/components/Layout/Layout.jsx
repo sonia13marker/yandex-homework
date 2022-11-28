@@ -2,7 +2,6 @@
 import cartImage from "./shopping-cart.png";
 import styles from "./Layout.css";
 import { Link } from "react-router-dom";
-import { BookshelfPage } from "../../pages/BookshelfPage/BookshelfPage.jsx";
 
 export const Layout = (props) => {
   return (
