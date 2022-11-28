@@ -1,7 +1,5 @@
 /*тут отображение содержимого одного отзыва*/
 import styles from './Review.css';
-import { useSelector, useDispatch } from 'react-redux';
-import { selectReviewById } from '../../store/reviews/selectors.js';
 
 export const Review = ({name,rating,text}) => {
 	// const dispatch = useDispatch()
