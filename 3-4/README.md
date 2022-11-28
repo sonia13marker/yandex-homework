@@ -13,7 +13,7 @@
 Страница корзины, в которой отображаются все выбранные книги, их колличество  и общая сумма покупки: 
 ![image](https://user-images.githubusercontent.com/111881249/201897091-e0e2dc18-ba6f-42a5-9e89-5bba347af95d.png)
 Также, если зайти в корзину, в которой еще нет товаров, будет отображаться надпись, сообщающая о том, что товаров в корзине нет: 
-![image](https://user-images.githubusercontent.com/111881249/201897238-1d3a35d2-8439-423e-9303-ace2d7c59cab.png)
+![image](https://user-images.githubusercontent.com/111881249/204283042-d83792aa-19c4-4f43-b303-94f951ad74c5.png)
 
 
 
