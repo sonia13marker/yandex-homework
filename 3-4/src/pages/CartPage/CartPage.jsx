@@ -15,7 +15,7 @@ export const CartPage = () => {
     })
     console.log(dataToRender)
     // console.log({Book})
-    if(Object.values(cart).length === 0) return <p>Ничего не добавлено.</p>
+    if(Object.values(cart).length === 0) return <div className='warning'> <p >В корзину ничего не добавлено.</p></div>
 	return(
         <section className='container1'>
             <Summary data={dataToRender}/>
