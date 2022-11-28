@@ -2,12 +2,10 @@
 
 import { Layout } from "./components/Layout/Layout.jsx";
 import { BookshelfPage } from "./pages/BookshelfPage/BookshelfPage.jsx";
-import { bookshelfs } from "./constants/mock.js";
 import { ReviewsPage } from "./pages/ReviewsPage/ReviewsPage.jsx";
 import { Provider } from "react-redux";
 import { store } from "./store";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Bookshelf } from "./components/Bookshelf/Bookshelf.jsx";
 import { CartPage } from "./pages/CartPage/CartPage.jsx";
 
 export function App() {
