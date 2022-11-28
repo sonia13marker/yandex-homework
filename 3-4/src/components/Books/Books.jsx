@@ -2,8 +2,7 @@
 
 import { Book } from "../Book/Book.jsx";
 import styles from "./Books.css";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { selectBooksByGenre } from "../../store/book/selectors";
 
 export const Books = ({ genre }) => {
