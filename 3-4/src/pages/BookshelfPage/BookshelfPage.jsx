@@ -5,11 +5,6 @@ import { Books } from "../../components/Books/Books.jsx";
 import { useState } from "react";
 import { genres } from '../../constants/genres';
 
-import { useSelector } from "react-redux";
-import { selectBookshelfs } from "../../store/cinema/selectors";
-import { NavLink, Outlet, isActive } from "react-router-dom";
-import classnames from "classnames";
-
 export const BookshelfPage = () => {
   const [currentGenre, setCurrentGenre] = useState(genres[0]);
   {
